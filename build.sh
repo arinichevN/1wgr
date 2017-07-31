@@ -38,7 +38,7 @@ function build {
 	cd lib && \
 	build_lib $1 && \
 	cd ../ && \
-	gcc -D_REENTRANT $1 $PLATFORM main.c -o $2 -lpthread -L./lib -lpac && \
+	gcc -D_REENTRANT $1 $PLATFORM main.c -o $2 -Wall -pedantic -lpthread -L./lib -lpac && \
 	echo "Application successfully compiled. Launch command: sudo ./"$APP
 }
 
